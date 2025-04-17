@@ -6,8 +6,17 @@
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
 
+            <script>
+                function switchImage(imgElement, pressedSrc, defaultSrc, duration) {
+                    imgElement.src = pressedSrc;
+                    setTimeout(() => {
+                        imgElement.src = defaultSrc;
+                    }, duration);
+                }
+            </script>
+
                 <h1 style>
-                Title
+                Growth
                 </h1 style>
         
                 <style>
@@ -20,44 +29,70 @@
                         vertical-align: middle;
                         padding:20px;
                         }
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(rgb(255, 255, 255), rgb(77, 75, 139))
+}  
                 </style>
-
-
     </head>
 
-    <body style="background-color: rgb(255, 192, 137);">
+    <!--body style="background-color: rgb(255, 192, 137);"-->
 
         <div class="row">
-            <div class="image-container"><img id= img1 src="img/skul.png" height="200" width="200"/></div>
-            <div class="image-container"><img id= img2 src="img/tri.png" height="200" width="200"
-                onmousedown="this.src='img/her.png';"
-                onmouseup="this.src='img/tri.png'"  
+            <div class="image-container"><img id= img1 src="img/Icon1.png" height="200" width="200"
+                onmousedown="this.src='img/Icon1-1.png';"
+                onmouseup="this.src='img/Icon1.png'"
+                /></div>  
+            <div class="image-container"><img id= img2 src="img/Icon2.png" height="200" width="200"
+                onmousedown="this.src='img/Icon2-2.png';"
+                onmouseup="this.src='img/Icon2.png'"  
                 /></div>
-            <div class="image-container"><img id= img3 src="img/squ.png" height="200" width="200"/></div>
+            <div class="image-container"><img id= img3 src="img/Icon3.png" height="200" width="200"
+                onmousedown="this.src='img/Icon3-3.png';"
+                onmouseup="this.src='img/Icon3.png'"
+                /></div>
         </div>
 
         <div class="row">
-            <div class="image-container"><img id= img4 src="img/hex.png" height="200" width="200"/></div>
-            <div class="image-container"><img id= img5 src="img/rec.png" height="200" width="200"/></div>
-            <div class="image-container"><img id= img6 src="img/sta.png" height="200" width="200"/></div>
+            <div class="image-container"><img id= img4 src="img/Icon4.png" height="200" width="200"
+                onmousedown="this.src='img/Icon4-4.png';"
+                onmouseup="this.src='img/Icon4.png'" 
+                /></div>
+            <div class="image-container"><img id= img5 src="img/Icon5.png" height="200" width="200"
+                onmousedown="this.src='img/Icon5-5.png';"
+                onmouseup="this.src='img/Icon5.png'" 
+                /></div>
+            <div class="image-container"><img id= img6 src="img/Icon6.png" height="200" width="200"
+                onmousedown="this.src='img/Icon6-6.png';"
+                onmouseup="this.src='img/Icon6.png'" 
+                /></div>
         </div>
 
         <div class="row">
-            <div class="image-container"><img id= img7 src="img/trr.png" height="200" width="200"/></div>
-            <div class="image-container"><img id= img8 src="img/sqr.png" height="200" width="200"/></div>
-            <div class="image-container"><img id= img9 src="img/her.png" height="200" width="200"/></div>
+            <div class="image-container"><img id= img7 src="img/Icon7.png" height="200" width="200"
+                onclick="switchImage(this, 'img/Icon7-7.png', 'img/Icon7.png', 1000)" 
+                /></div>
+            <div class="image-container"><img id= img8 src="img/Icon8.png" height="200" width="200"
+                onmousedown="this.src='img/Icon8-8.png';"
+                onmouseup="this.src='img/Icon8.png'" 
+                /></div>
+            <div class="image-container"><img id= img9 src="img/Icon9.png" height="200" width="200"
+                onmousedown="this.src='img/Icon9-9.png';"
+                onmouseup="this.src='img/Icon9.png'" 
+                /></div>
         </div>
-
-        
 
         <script>
-            var sound1 = new buzz.sound("sound/TAP.mp3");
+            var sound1 = new buzz.sound("sound/nature.mp3");
             var sound2 = new buzz.sound("sound/glitch2.mp3");
             var sound3 = new buzz.sound("sound/glitch3.mp3");
             var sound4 = new buzz.sound("sound/glitch1.mp3");
             var sound5 = new buzz.sound("sound/glitch2.mp3");
-            var sound6 = new buzz.sound("sound/glitch3.mp3");
-            var sound7 = new buzz.sound("sound/glitch1.mp3");
+            var sound6 = new buzz.sound("sound/weight.mp3");
+            var sound7 = new buzz.sound("sound/chaching1.mp3");
             var sound8 = new buzz.sound("sound/glitch2.mp3");
             var sound9 = new buzz.sound("sound/glitch3.mp3");
 
@@ -73,8 +108,6 @@
                 document.getElementById('img9').addEventListener('click', function () {sound9.play(); });
             };  
         </script>  
-
-
 
     </body>
 
