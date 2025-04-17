@@ -6,6 +6,8 @@
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
 
+<!--Defining the switchImage function for onclick, also including a time element-->
+
             <script>
                 function switchImage(imgElement, pressedSrc, defaultSrc, duration) {
                     imgElement.src = pressedSrc;
@@ -43,16 +45,13 @@ body {
 
         <div class="row">
             <div class="image-container"><img id= img1 src="img/Icon1.png" height="200" width="200"
-                onmousedown="this.src='img/Icon1-1.png';"
-                onmouseup="this.src='img/Icon1.png'"
-                /></div>  
+                onclick="switchImage(this, 'img/Icon1-1.png', 'img/Icon1.png', 5000)" 
+                /></div>
             <div class="image-container"><img id= img2 src="img/Icon2.png" height="200" width="200"
-                onmousedown="this.src='img/Icon2-2.png';"
-                onmouseup="this.src='img/Icon2.png'"  
+                onclick="switchImage(this, 'img/Icon2-2.png', 'img/Icon2.png', 1000)"  
                 /></div>
             <div class="image-container"><img id= img3 src="img/Icon3.png" height="200" width="200"
-                onmousedown="this.src='img/Icon3-3.png';"
-                onmouseup="this.src='img/Icon3.png'"
+                onclick="switchImage(this, 'img/Icon3-3.png', 'img/Icon3.png', 4000)" 
                 /></div>
         </div>
 
@@ -86,9 +85,9 @@ body {
         </div>
 
         <script>
-            var sound1 = new buzz.sound("sound/nature.mp3");
-            var sound2 = new buzz.sound("sound/glitch2.mp3");
-            var sound3 = new buzz.sound("sound/glitch3.mp3");
+            var sound1 = new buzz.sound("sound/nature1.mp3");
+            var sound2 = new buzz.sound("sound/dading1.mp3");
+            var sound3 = new buzz.sound("sound/ticktock1.mp3");
             var sound4 = new buzz.sound("sound/glitch1.mp3");
             var sound5 = new buzz.sound("sound/glitch2.mp3");
             var sound6 = new buzz.sound("sound/weight.mp3");
